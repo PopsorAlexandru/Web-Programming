@@ -1,0 +1,59 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Problem 25</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<style>
+    #container{
+        width:100px;
+        height: 100px;
+        position: absolute;
+        top:0%;
+        left:45%;
+        transition: linear 2s;
+    }
+
+    #ball{
+        position: absolute;
+        top:0%;
+        left:45%;      
+        height: 100px;
+        width: 100px;
+        background-color:orangered;
+        border-radius: 50%;            
+    }
+    
+    #container:hover{
+        top:80%
+    }
+    
+    #ball:hover{ 
+        
+        animation-name: bounce;
+        animation-duration:0.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes moveBottom {
+        from{top:0%}
+        to{top:100%}
+        
+    }
+        
+    @keyframes bounce{
+        0%      {transform:translateY(0);}
+        50%     {transform: translateY(-200px);}
+        100%    {transform: translateY(0);}            
+    } 
+</style>
+<body>   
+    <div id="container"> 
+        <div id="ball"></div>
+    </div>
+</body>
+</html>
